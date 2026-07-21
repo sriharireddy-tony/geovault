@@ -1,0 +1,68 @@
+# ── Secrets & local env ──────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env*.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+secrets/
+
+# ── OS / IDE ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env/
+.Python
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache/
+
+# ── Node / frontend build ────────────────────────────────────
+node_modules/
+frontend/dist/
+*.local
+
+# ── App local data (do not push) ─────────────────────────────
+backend/media/
+backend/chroma_data/
+**/chroma_data/
+**/lc_local_vectors/
+uploads/
+exports/
+tmp/
+temp/
+*.log
+logs/
+
+# ── LangChain / LangSmith local artifacts ────────────────────
+.langchain/
+.langsmith/
+
+# ── Misc ─────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+dump.rdb
+.redis/

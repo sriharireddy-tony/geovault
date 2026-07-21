@@ -1,2 +1,47 @@
+# Secrets
 .env
-node_modules
+.env.*
+!.env.example
+!.env*.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Virtual env / Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local runtime data (uploads, vectors, caches)
+media/
+chroma_data/
+lc_local_vectors/
+uploads/
+exports/
+tmp/
+temp/
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# Accidental frontend leftovers in backend
+node_modules/
+dist/

@@ -14,13 +14,6 @@ export const projectService = {
     const res = await api.post<Project>("/projects", data);
     return res.data;
   },
-  async update(
-    id: string,
-    data: { title?: string; assets?: { asset_type: string; asset_id: string }[] },
-  ): Promise<Project> {
-    const res = await api.put<Project>(`/projects/${id}`, data);
-    return res.data;
-  },
   async updateSelection(
     id: string,
     data: { audio_ids: string[]; image_ids: string[]; video_ids: string[] },

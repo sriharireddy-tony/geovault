@@ -14,6 +14,9 @@ import VideoDetailPage from "../modules/videos/VideoDetailPage";
 import ProjectsPage from "../modules/projects/ProjectsPage";
 import ProjectDetailPage from "../modules/projects/ProjectDetailPage";
 import EditorPage from "../modules/editor/EditorPage";
+import KnowledgeSpacesPage from "../modules/knowledge/KnowledgeSpacesPage";
+import SpaceDetailPage from "../modules/knowledge/SpaceDetailPage";
+import KnowledgeChatPage from "../modules/knowledge/KnowledgeChatPage";
 
 export default function AppRoutes() {
   return (
@@ -33,6 +36,9 @@ export default function AppRoutes() {
           <Route path="videos/:id" element={<VideoDetailPage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="projects/:id" element={<ProjectDetailPage />} />
+          <Route path="knowledge" element={<KnowledgeSpacesPage />} />
+          <Route path="knowledge/:spaceId" element={<SpaceDetailPage />} />
+          <Route path="knowledge/:spaceId/chat" element={<KnowledgeChatPage />} />
           <Route path="editor" element={<EditorPage />} />
         </Route>
       </Route>

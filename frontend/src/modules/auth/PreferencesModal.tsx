@@ -1,6 +1,6 @@
 import { Modal, Form, Button } from "react-bootstrap";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setThemeMode, setThemeColor, savePreferences } from "../../app/prefsSlice";
+import { setThemeMode, setThemeColor, savePreferences, type ThemeMode } from "../../app/prefsSlice";
 import { toast } from "react-toastify";
 
 const PRESETS = [
@@ -39,7 +39,10 @@ export default function PreferencesModal({ show, onHide }: Props) {
       <Modal.Body>
         <Form.Group className="mb-3">
           <Form.Label className="small fw-medium">Theme Mode</Form.Label>
-          <Form.Select value={themeMode} onChange={(e) => dispatch(setThemeMode(e.target.value))}>
+          <Form.Select
+            value={themeMode}
+            onChange={(e) => dispatch(setThemeMode(e.target.value as ThemeMode))}
+          >
             <option value="system">System</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>

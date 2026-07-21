@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, type PayloadAction } from "@reduxjs/toolkit";
 import { preferenceService } from "../services/preference.service";
 
-type ThemeMode = "light" | "dark" | "system";
+export type ThemeMode = "light" | "dark" | "system";
 
-interface PrefsState {
+export interface PrefsState {
   themeMode: ThemeMode;
   themeColor: string;
   sidebarCollapsed: boolean;
@@ -40,12 +40,12 @@ const prefsSlice = createSlice({
   name: "prefs",
   initialState,
   reducers: {
-    setThemeMode(state, action) {
+    setThemeMode(state, action: PayloadAction<ThemeMode>) {
       state.themeMode = action.payload;
       localStorage.setItem("theme_mode", action.payload);
       applyTheme(action.payload, state.themeColor);
     },
-    setThemeColor(state, action) {
+    setThemeColor(state, action: PayloadAction<string>) {
       state.themeColor = action.payload;
       localStorage.setItem("theme_color", action.payload);
       applyTheme(state.themeMode, action.payload);

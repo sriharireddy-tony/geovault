@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.api.v1 import auth, users, audios, images, videos, projects, preferences
+from app.api.v1.knowledge import router as knowledge_router
 
 router = APIRouter(prefix="/api/v1")
 
@@ -11,3 +12,4 @@ router.include_router(images.router, prefix="/images", tags=["images"])
 router.include_router(videos.router, prefix="/videos", tags=["videos"])
 router.include_router(projects.router, prefix="/projects", tags=["projects"])
 router.include_router(preferences.router, prefix="/preferences", tags=["preferences"])
+router.include_router(knowledge_router, prefix="/knowledge", tags=["knowledge"])

@@ -10,6 +10,7 @@ from app.core.config import get_settings
 from app.core.database import engine
 from app.middleware.tenant_middleware import TenantContextMiddleware
 from app.models import Base
+import app.domains.knowledge.models  # noqa: F401 — register knowledge tables on Base.metadata
 from app.utils.logging import setup_logging
 
 

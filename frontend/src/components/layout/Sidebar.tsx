@@ -7,6 +7,7 @@ import {
   MdVideocam,
   MdFolder,
   MdEdit,
+  MdMenuBook,
   MdChevronLeft,
   MdChevronRight,
 } from "react-icons/md";
@@ -17,6 +18,7 @@ const NAV = [
   { to: "/", icon: MdDashboard, label: "Dashboard" },
   { to: "/users", icon: MdPeople, label: "Users" },
   { to: "/projects", icon: MdFolder, label: "Projects" },
+  { to: "/knowledge", icon: MdMenuBook, label: "Knowledge" },
   { to: "/audios", icon: MdAudiotrack, label: "Audios" },
   { to: "/images", icon: MdImage, label: "Images" },
   { to: "/videos", icon: MdVideocam, label: "Videos" },
