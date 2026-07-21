@@ -1,0 +1,4 @@
+[tool.pyrefly]
+python-interpreter-path = ".venv/Scripts/python.exe"
+search-path = ["."]
+disable-search-path-heuristics = true

@@ -1,0 +1,86 @@
+@use "variables" as v;
+
+[data-theme="light"] {
+  --bg: #{v.$light-bg};
+  --surface: #{v.$light-surface};
+  --surface-2: #{v.$light-surface-2};
+  --text: #{v.$light-text};
+  --muted: #{v.$light-muted};
+  --border: #{v.$light-border};
+  --shadow: #{v.$light-shadow};
+}
+
+[data-theme="dark"] {
+  --bg: #{v.$dark-bg};
+  --surface: #{v.$dark-surface};
+  --surface-2: #{v.$dark-surface-2};
+  --text: #{v.$dark-text};
+  --muted: #{v.$dark-muted};
+  --border: #{v.$dark-border};
+  --shadow: #{v.$dark-shadow};
+
+  .table {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--text);
+    --bs-table-border-color: var(--border);
+    --bs-table-striped-bg: var(--surface-2);
+    --bs-table-hover-bg: var(--surface-2);
+  }
+
+  .modal-content {
+    background-color: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .modal-header {
+    border-bottom-color: var(--border);
+  }
+
+  .modal-footer {
+    border-top-color: var(--border);
+  }
+
+  .form-control,
+  .form-select {
+    background-color: var(--surface-2);
+    color: var(--text);
+    border-color: var(--border);
+
+    &:focus {
+      background-color: var(--surface-2);
+      color: var(--text);
+    }
+  }
+
+  .dropdown-menu {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+
+  .dropdown-item {
+    color: var(--text);
+
+    &:hover,
+    &:focus {
+      background-color: var(--surface-2);
+      color: var(--text);
+    }
+  }
+
+  .card {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+
+  .btn-outline-secondary {
+    color: var(--muted);
+    border-color: var(--border);
+
+    &:hover {
+      background-color: var(--surface-2);
+      color: var(--text);
+      border-color: var(--border);
+    }
+  }
+}
